@@ -81,4 +81,7 @@ setup(
         'install_lib': install_lib,
         'build_ext': cmake_build_ext,
     },
+    entry_points = {
+        'maliput.backends': ["@WHEEL_MALIPUT_PLUGIN_ENTRY_POINT@"]
+    }
 )

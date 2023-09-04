@@ -34,8 +34,7 @@ function (_copy_target TARGET SOURCE DEST)
 endfunction()
 
 function (add_wheel WHEEL_TARGET)
-  set(Python_FIND_VIRTUALENV FIRST) # Favor venv over system install
-  find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+  # find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 
   # Parse arguments
   cmake_parse_arguments(WHEEL

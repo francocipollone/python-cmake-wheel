@@ -139,6 +139,9 @@ function (add_wheel WHEEL_TARGET)
     set(EXTRA_ARGS "")
   endif()
 
+  message (STATUS "WHEEL_DEPLOY_DIRECTORY: ${WHEEL_DEPLOY_DIRECTORY}")
+  message (STATUS "Python3_EXECUTABLE: ${Python3_EXECUTABLE}")
+  message (STATUS "current binary dir: ${CMAKE_CURRENT_BINARY_DIR}")
   add_custom_target(${WHEEL_TARGET}-setup-py
     COMMAND
       "${Python3_EXECUTABLE}" "-m" "pip" "wheel"
